@@ -4,17 +4,26 @@
 from collections import deque
 
 
-def get_fibonacci_number(TODO):
+def get_fibonacci_number(TODO): # raté
+	pass
+			
+
+def get_fibonacci_sequence(index): # raté
 	pass
 
-def get_fibonacci_sequence(TODO):
-	pass
+def get_sorted_dict_by_decimals(dico): # le prof l'a fait d'une façon vraiment cool
+									   # % est reste de LA DIVISION ENTIERE
+	
+	def f(x):
+		val = format(x[1], '.1f')
+		return val[-1]
 
-def get_sorted_dict_by_decimals(TODO):
-	pass
+	return dict(sorted(dico.items(), key=f)) # quand on fait appel à une fonction avec key pas besoin de lui passer un parametre
+											 # elle prendra automatiquement chaque elt à sort
+	return dict(sorted(dico.items(), key=lambda x: format(x[1], '.1f')[-1])) # version lambda
 
 def fibonacci_numbers(length):
-	pass
+	
 
 def build_recursive_sequence_generator(TODO):
 	pass
