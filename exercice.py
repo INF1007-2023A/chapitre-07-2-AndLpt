@@ -4,12 +4,13 @@
 from collections import deque
 
 
-def get_fibonacci_number(TODO): # raté
-	pass
+def get_fibonacci_number(num): # refait et c'est good
+	return None if num <0 else 0 if num == 0 else 1 if num == 1 else get_fibonacci_number(num - 1) + get_fibonacci_number(num - 2)
 			
 
-def get_fibonacci_sequence(index): # raté
+def get_fibonacci_sequence(index): # raté encore
 	pass
+
 
 def get_sorted_dict_by_decimals(dico): # le prof l'a fait d'une façon vraiment cool
 									   # % est reste de LA DIVISION ENTIERE
@@ -23,7 +24,12 @@ def get_sorted_dict_by_decimals(dico): # le prof l'a fait d'une façon vraiment 
 	return dict(sorted(dico.items(), key=lambda x: format(x[1], '.1f')[-1])) # version lambda
 
 def fibonacci_numbers(length):
-	
+	if length == 0:
+		yield 0
+	if length == 1:
+		yield 1
+	else: 
+		yield fibonacci_numbers(length - 2) + fibonacci_numbers(length - 1)
 
 def build_recursive_sequence_generator(TODO):
 	pass
